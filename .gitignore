@@ -6,3 +6,7 @@ aws-secret-envs.txt
 *.tmp
 *.db
 filmed-media-system-firebase-adminsdk-7946c-3a93766c6e.json
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml

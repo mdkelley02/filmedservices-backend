@@ -7,7 +7,13 @@ from app.extensions import db
 S3_REGION = os.environ.get("BUCKET_REGION")
 PHOTO_BUCKET = os.environ.get("PHOTO_BUCKET")
 VIDEO_BUCKET = os.environ.get("VIDEO_BUCKET")
-s3 = boto3.client("s3")
+# s3 = boto3.client("s3")
+s3 = boto3.client(
+    "s3",
+    region_name=os.environ.get("AWS_DEFAULT_REGION"),
+    aws_access_key_id=os.environ.get("AWS_ACCESS_KEY_ID"),
+    aws_secret_access_key=os.environ.get("AWS_SECRET_ACCESS_KEY")
+)
 
 
 class MediaService:
