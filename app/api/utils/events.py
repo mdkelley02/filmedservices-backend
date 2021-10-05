@@ -1,0 +1,20 @@
+from enum import Enum
+
+
+class Events(str, Enum):
+    # user events
+    USER_CREATION_INITIATED = "USER_CREATION_INITIATED"
+    USER_CREATED = "USER_CREATED"
+    USER_LOGGED_IN = "USER_LOGGED_IN"
+    USER_DOES_NOT_EXIST = "USER_DOES_NOT_EXIST"
+
+    # video events
+    VIDEO_CREATED = "VIDEO_CREATED"
+
+    # school events
+    SCHOOL_CREATED = "SCHOOL_CREATED"
+    SCHOOL_DELETED = "SCHOOL_DELETED"
+
+    # media events
+    MEDIA_CREATED = "MEDIA_CREATED"
+    MEDIA_DELETED = "MEDIA_DELETED"
